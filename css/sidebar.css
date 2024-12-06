@@ -1,0 +1,200 @@
+/* Estilo del menú hamburguesa */
+.navbar-toggler {
+  border: none !important;
+  outline: none;
+}
+
+/* Estilo del menú colapsable */
+#navigation {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  /* Ajusta el ancho según sea necesario */
+  background-color: #ffffff;
+  /* Fondo blanco */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  /* Sombra opcional */
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  /* Ocultar menú por defecto */
+}
+
+/* Mostrar el menú cuando esté colapsado */
+.navbar-collapse.show {
+  transform: translateX(0) !important;
+}
+
+/* Opcional: Estilos para el contenido del menú */
+
+#navigation .nav-link {
+  color: #333 !important;
+  /* Color del texto de los enlaces */
+  padding: 15px 20px;
+  display: block;
+  text-align: left;
+}
+
+#navigation .nav-link:hover {
+  background-color: #f8f9fa !important;
+  /* Color de fondo al pasar el mouse */
+}
+
+.enlace {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px;
+}
+p{
+  font-family: "Roboto", sans-serif;
+}
+a{
+  font-family: "Roboto", sans-serif;
+}
+button{
+  font-family: "Roboto", sans-serif;
+}
+.close-btn {
+  color: red;
+  font-size: 30px;
+  border: none;
+}
+
+.enlace:hover {
+  /* Tus estilos para el hover */
+  color: #D62121 !important;
+}
+
+.navbar{
+    display: flex !important;
+    flex-basis: auto;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    margin: auto !important;
+
+}
+
+/* Para todos los enlaces */
+.enlace a {
+  position: relative;
+  color: #000; /* Color de texto normal */
+}
+
+.enlace a::after {
+  margin: -10px !important;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Por defecto, sin borde */
+  height: 2px;
+  background-color: #D62121; /* Color azul del borde */
+  transition: width 0.3s ease; /* Transición suave para el borde */
+}
+
+/* Cuando pasas el mouse por encima de cualquier enlace */
+.enlace a:hover::after {
+  width: 50%; /* Mostrar borde hasta la mitad al hacer hover */
+}
+
+/* Para el enlace activo */
+.enlace a.active::after {
+  width: 50% ; /* Siempre mostrar el borde hasta la mitad en el activo */
+}
+
+/* Opcional: color azul en el texto del activo */
+.enlace a.active {
+  color: #D62121;
+}
+
+
+/* Para hacer que el menú hamburguesa se comporte bien en móvil */
+@media (max-width: 768px) {
+  .nav {
+      display: flex !important;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%; /* Asegurar que el menú ocupe el 100% del ancho */
+  }
+
+  /* Asegurarse de que los <li> ocupen todo el ancho */
+  .nav > li {
+      width: 100% !important;
+      padding: 10px 15px; /* Añadir algo de espacio para una mejor apariencia */
+      display: block;
+  }
+
+  /* Los <label> y <select> deben estar alineados en columnas */
+  .nav li label,
+  .nav li select {
+      display: block !important;
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  /* Si hay problemas con la alineación de los íconos y textos en <a> */
+  .nav a {
+      display: flex;
+      align-items: center;
+  }
+
+  .nav i {
+      margin-right: 10px;
+  }
+
+  /* Asegúrate de que los <select> no tengan restricciones de tamaño en el menú colapsado */
+  .nav select {
+      width: 100%; /* El select ocupa todo el ancho disponible */
+      margin-top: 5px;
+      padding: 5px;
+  }
+
+  /* Controlar el menú colapsable */
+  #navigation {
+      overflow-y: auto;
+      max-height: 100vh; /* Permitir que el menú se desplace si es muy largo */
+  }
+
+  /* Estilo de menú en móvil cuando está activo */
+  .navbar-collapse.show {
+      display: block;
+      width: 100%;
+  }
+}
+
+
+.sidebar[data-active-color="danger"] .nav li.active > a,
+.sidebar[data-active-color="danger"] .nav li.active > a i {
+  color: #D62121 !important;
+} 
+
+#imagen-logo{
+  width: 50px !important;
+  height: 50px !important;
+  margin-top: 10px;
+
+}
+.div-image-logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto !important;
+}
+
+.div-logo-supra {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  margin: 0 auto !important;
+  height: 700px;
+}
+#imagen-supra {
+  width: 100px !important;
+  height: 100px !important;
+}

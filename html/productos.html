@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header>
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon-cart">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product hidden">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <p class="cantidad-producto-carrito">1</p>
+                            <p class="titulo-producto-carrito">Zapatos Nike</p>
+                            <p class="precio-producto-carrito">#1</p>
+                            <p class="precio-producto-carrito">$80</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <h3 class="total-pagar">$200</h3>
+                </div>
+                <p class="cart-empty">El carrito está vacío</p>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="search-bar">
+                <div class="search-bar-container">
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                    <!-- Botón de lupa -->
+                    <button id="search-button">
+                        <i class="fa-solid fa-search"></i> <!-- Icono de lupa -->
+                    </button>
+                    <button id="filter-button">FILTRAR+</button>
+
+                    <button id="grid-button">
+                        <i class="fa-solid fa-table"></i> <!-- Icono de tabla -->
+                    </button>
+                    <button id="btnExportar" class="btn btn-success">
+                        <i class="fas fa-file-excel"></i> Exportar a Excel
+                    </button>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+               <!--  <button id="filter-solo-ofertas">Sólo Ofertas</button> -->
+                <button id="filter-solo-con-stock">Sólo Stock</button>
+                <span id="product-count">0 Productos</span>
+            </div>
+
+            <div class="filter-container">
+                <!-- Filtrar por Precio -->
+                <div class="filter-group">
+                    <label for="filter-price">Filtrar por precio</label>
+                    <select id="filter-price" class="filter-select">
+                        <option value="" disabled selected>Seleccionar opción</option>
+                        <option value="price-asc">Menor a mayor (Precio)</option>
+                        <option value="price-desc">Mayor a menor (Precio)</option>
+                        <option value="price-random">Aleatorio (Precio)</option>
+                    </select>
+                </div>
+
+                <!-- Filtrar por Código -->
+                <div class="filter-group">
+                    <label for="filter-code">Filtrar por código</label>
+                    <select id="filter-code" class="filter-select">
+                        <option value="" disabled selected>Seleccionar opción</option>
+                        <option value="code-asc">Menor a mayor (Código)</option>
+                        <option value="code-desc">Mayor a menor (Código)</option>
+                        <option value="code-random">Aleatorio (Código)</option>
+                    </select>
+                </div>
+
+                <!-- Filtrar por Descripción -->
+                <div class="filter-group">
+                    <label for="filter-description">Filtrar por descripción</label>
+                    <select id="filter-description" class="filter-select">
+                        <option value="" disabled selected>Seleccionar opción</option>
+                        <option value="description-short">Más corta primero</option>
+                        <option value="description-long">Más larga primero</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </header>
+    <div class="container-items">
+        <!-- Aquí se inyectan los items 
+			<div class="item">
+				<figure>
+					<img
+						src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Zapatos Nike</h2>
+					<p  class ="marca"> <i class="fa-regular fa-copyright"></i> </p>
+					<div class="footer-product">
+						<button class="fa fa-shopping-cart btn-add-cart"></button>
+						<button id="info-btn" class="fa-solid fa-info"></button>
+					</div>
+					<!-- Modal 
+					<div id="infoModal1" class="modal" style="display:none;">
+						<div class="modal-content1">
+							<span class="close">&times;</span>
+							<p id="productDescription"></p>
+						</div>
+					</div>
+				</div> 
+			</div> <!-- Fin Producto -->
+    </div> <!-- Fin Container -->
+
+    <div class="pagination">
+        <button class="pagination-button" id="prev-page">Anterior</button>
+        <div id="pagination-numbers"></div>
+        <button class="pagination-button" id="next-page">Siguiente</button>
+    </div>
+
+    <button id="scrollToTopBtn" class="scrollToTop">
+        &#8679;
+    </button>
+</body>
+
+
+</html>

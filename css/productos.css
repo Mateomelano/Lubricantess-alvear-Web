@@ -1,0 +1,1120 @@
+#content-area {
+    position: relative;
+    display: flex;
+    top: 80px;
+    width: 100%; /* Cambiado a 100%  heigth 91.5vh */
+    height: 100%;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #f3eeee;
+    max-width: 100%; /* Asegura que no exceda el 100% */
+    font-family: "Roboto", sans-serif;
+}
+
+.content {
+}
+
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    justify-content: space-between;
+    padding: 10px 0 20px 0;
+    width: 100%; /* Asegura que ocupe el 100% del contenedor padre */
+}
+
+.container-icon{
+    display: none; /* OCULTAR CARRITO */
+    height: 40px;
+
+
+}
+
+.count-products{
+    position: relative;
+    bottom: 20px;
+    text-align: center;
+    
+
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos{
+    font-size: 12px;
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    left: 90px !important;
+    margin: 0 auto;
+    background-color: #fff;
+    width: 80vh;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    
+}
+
+.cart-product{
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+
+.info-cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart{
+    display: none;
+}
+
+
+
+
+/* Main */
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+
+    
+}
+
+.item {
+    display: flex !important; 
+    flex-direction: column;
+    
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    background-color: #fff;
+
+}
+
+.item h2{
+    font-size: 1.5rem;
+    border-bottom: #afacac 1px solid;
+    text-align: center;
+}
+
+
+.code{
+    font-size: 18px;
+    color: black;
+    border-bottom: #000 1px solid;
+}
+
+.stock{
+    font-size: 18px;
+    color: black;
+    border-bottom: #000 1px solid;
+}
+
+.marca{
+    font-size: 18px;
+    color: black;
+    border-bottom: #000 1px solid;
+}
+
+.item img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+    display: block;
+
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover img{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.info-product{
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    
+}
+
+.info-product p{
+    font-size: 20px;
+    border-bottom: #afacac 1px solid;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+.info-product button {
+    width: 10%;
+    border: none;
+    font-size: 20px; 
+    color: grey;
+    outline: none !important;
+    background: transparent; /* Aseguramos que el fondo es transparente si es necesario */
+}
+
+
+.info-product button:focus {
+    outline: none !important;
+    box-shadow: none !important; /* Elimina cualquier sombra en el estado de foco */
+}
+
+button:active {
+    outline: none !important;
+    box-shadow: none !important; /* Elimina cualquier sombra en el estado activo */
+    border: none !important;     /* Asegura que no haya bordes en estado activo */
+}
+
+.info-product button:hover{
+    color: #bb1e1e;
+    cursor: pointer;
+}
+
+#price{
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 20%;
+}
+
+
+.footer-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto; 
+    padding: 10px; /* Ajustar el espaciado si es necesario */
+    margin: 0 auto;
+}
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-add-cart {
+    width: 40px; /* Puedes ajustar este valor */
+    height: 40px; /* Ajustar si es necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Si no deseas fondo en el botón */
+    border: none;
+    cursor: pointer;
+}
+
+.btn-add-cart .fa-shopping-cart {
+    font-size: 24px; /* Ajusta el tamaño del ícono */
+    color: #000; /* Color del ícono */
+}
+
+
+
+
+@media screen and (max-width: 1750px) {
+    .container-items{
+        grid-template-columns: repeat(4, 1fr);
+    }  
+    .count-products{
+        left: px;
+    }
+    .icon-cart{
+        left: 460px;
+    }
+    .container-cart-products{
+        left: 100px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .container-items{
+        grid-template-columns: repeat(3, 1fr);
+    }  
+
+}
+
+@media screen and (max-width: 1250px) {
+    .container-cart-products{
+        width: 60vh;
+    }   
+
+}
+
+
+
+@media screen and (max-width: 770px) {
+    .container-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center; /* Centra horizontalmente */
+    }  
+
+    .item {
+        width: 90%;
+        margin-bottom: 20px;
+        justify-self: center; /* Centra individualmente cada elemento */
+    }
+    .item h2{
+        font-size: 1.3rem;
+    }
+    .item p{
+        font-size: 1.2rem;
+    }
+    .item i{
+        font-size: 1.2rem;
+    }
+    .container-cart-products{
+
+        top: 60px; /* Ajustar posición en dispositivos pequeños */
+        left: 24% !important; /* Centrar horizontalmente */
+        transform: translateX(-20%); /* Centrar completamente */
+        margin: 0 auto;
+        background-color: #fff;
+        width: 90%; /* Ajustar ancho según el dispositivo */
+        z-index: 1;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+        border-radius: 10px;
+        padding: 15px;
+    } 
+
+    .container-cart-products span, .container-cart-products p{
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 500px) {
+        .container-cart-products p{
+            font-size: 0.9rem !important;
+            text-align: center;            
+        }   
+        .container-cart-products span{
+            font-size: 0.9rem !important;   
+            text-align: center;            
+        }   
+        .container-cart-products h3{
+            font-size: 0.9rem !important; 
+            text-align: center;              
+        }   
+    }
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%; /* Ajustar al 100% */
+    margin-top: 10px;
+}
+
+#search-input {
+    width: 70%;  /* Ajustar al 70% */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+
+
+.hidden {
+    display: none;
+}
+.visible {
+    opacity: 1;
+    max-height: 1000px; /* Ajusta según sea necesario */
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+
+select {
+    border: 1px solid #ccc; /* Un borde sutil */
+    background-color: #f9f9f9; /* Fondo suave */
+    border-radius: 8px; /* Borde redondeado */
+    font-size: 14px;
+    width: 90%; /* Reducir el ancho al 90% */
+    margin: 10px ; /* Ajustar márgenes para centrar el select */
+    padding: 10px 15px; /* Añadir espacio interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar sensación de profundidad */
+    cursor: pointer; /* Cambia el cursor al estilo de clic */
+    transition: all 0.3s ease; /* Transiciones suaves en hover/focus */
+    position: relative; /* Posicionar relativo para el pseudo-elemento */
+
+}
+
+select::after {
+    content: "▼"; /* Flecha hacia abajo */
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    right: 15px; /* Ajustar posición a la derecha */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Evitar que interfiera con clics */
+}
+
+select:hover::after {
+    color: #bb1e1e; /* Cambia el color de la flecha al pasar el mouse */
+}
+
+select:focus {
+    border-color: #007bff; /* Color de borde al enfocar */
+    outline: none; /* Eliminar el borde azul de enfoque por defecto */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Añadir un glow al enfocarse */
+}
+
+label {
+    font-size: 16px; /* Tamaño de fuente ligeramente más grande */
+    color: #333; /* Color de texto oscuro para mejor legibilidad */
+    font-weight: 600; /* Hacerlo semi-negrita para destacar */
+    margin: 10px; /* Espacio entre el label y el select */
+    display: block; /* Asegurarse de que esté en una nueva línea */
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+label:hover {
+    color: #bb1e1e; /* Cambia el color al pasar el mouse */
+}
+
+
+#filter-button {
+    display: none;
+    background-color: #3b5998;
+    border: none !important;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;  /* Ajustar margen */
+}
+#grid-button {
+    background-color: #3b5998;
+    border: none !important;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;  /* Ajustar margen */
+}
+#btnExportar{
+    margin: 10px;
+}
+
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.items-per-page-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#itemsPerPageButton {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#itemsPerPageMenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 5px;
+    z-index: 1;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#pagination-numbers {
+    display: flex;
+    align-items: center;
+}
+
+#pagination-numbers button {
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #f0f0f0;
+}
+.pagination-number{
+    color: black !important;
+}
+#next-page{
+    color: black;
+    border-color: black;
+}
+
+#prev-page{
+    color: black;
+    border-color: black;
+}
+
+/* Ventana Modal*/
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 500%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content1 {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 50%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Slider Imagen Producto*/
+.image-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-button {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+
+}
+
+.filter-con-stock {
+    outline: none !important; /* Elimina el borde azul */
+    box-shadow: none !important; /* Elimina cualquier sombra */
+    background: transparent; /* Asegura que el fondo es transparente si es necesario */
+    border: none; /* Elimina el borde */
+}
+
+.filter-con-stock:focus {
+    outline: none !important;
+    box-shadow: none !important; /* Elimina cualquier sombra en el estado de foco */
+}
+
+.filter-con-stock:active {
+    outline: none !important;
+    box-shadow: none !important; /* Elimina cualquier sombra en el estado activo */
+    border: none !important;     /* Asegura que no haya bordes en estado activo */
+}
+
+.filter-active {
+    background-color: #28a745 !important; /* Cambia el color de fondo del botón */ 
+    color: white;              /* Cambia el color del texto */
+    border: none !important;   /* Asegura que no tenga borde */
+    outline: none !important;  /* Elimina el borde azul */
+    box-shadow: none !important; /* Elimina cualquier sombra */
+}
+
+
+.pagination-number.active {
+    background-color: #bb1e1e !important; /* Color de fondo para el botón activo */
+    color: white; /* Color del texto en el botón activo */
+    border: 1px solid #bb1e1e; /* Borde del botón activo */
+    border-radius: 4px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+}
+.cart-product img.product-image {
+    width: 60px; /* Ajusta el tamaño según lo necesites */
+    height: 60px !important; /* Ajusta el tamaño aquí lo necesites */
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* Estilos generales para las flechas en SweetAlert */
+.swal2-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+/* Estilos para los botones de las flechas */
+.swal2-prev-button, .swal2-next-button {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Para colocarlas a los lados */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000; /* Asegurarse de que queden sobre la imagen */
+}
+
+/* Efecto hover */
+.swal2-prev-button:hover, .swal2-next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el ratón */
+}
+
+/* Posicionar la flecha izquierda */
+.swal2-prev-button {
+    left: 10px;
+}
+
+/* Posicionar la flecha derecha */
+.swal2-next-button {
+    right: 10px;
+}
+
+/* Icono de las flechas */
+.swal2-prev-button i, .swal2-next-button i {
+    font-size: 24px;
+}
+
+/* Estilos generales para la tabla */
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para las celdas del encabezado */
+th {
+    background-color: #2b3a8e; /* Color azul oscuro */
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+td .btn-add-cart,
+td .fa-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    font-weight: bold;
+    border: none; /* Mantiene el borde negro */
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none !important; /* Elimina el borde azul */
+    box-shadow: none !important; /* Elimina cualquier sombra */
+    background: transparent; /* Aseguramos que el fondo es transparente si es necesario */
+}
+
+td .btn-add-cart i,
+td .fa-info i {
+    font-size: 18px; /* Ajustar según sea necesario */
+}
+
+td .btn-add-cart:hover,
+td .fa-info:hover {
+    background-color: white;
+}
+
+td .btn-add-cart:focus,
+td .fa-info:focus {
+    outline: none !important; /* Elimina el borde azul en el estado de foco */
+    box-shadow: none !important; /* Elimina cualquier sombra en el estado de foco */
+}
+
+td .btn-add-cart:active,
+td .fa-info:active {
+    outline: none !important; /* Elimina el borde azul en el estado activo */
+    box-shadow: none !important; /* Elimina cualquier sombra en el estado activo */
+    /* No eliminamos el borde negro aquí */
+}
+
+
+
+
+#grid-button:hover{
+    background-color: #7fa9e0;
+}
+#btnExportar{
+    background-color: green !important;
+    border-color: black !important;
+}
+
+.icon-close {
+    display: block;
+    margin: auto;
+    width: 18px; /* Tamaño del ícono */
+    height: 18px;
+}
+
+.btn-danger.icon-close {
+    padding: 5px; /* Ajuste de padding */
+    border-radius: 50%; /* Para que el botón sea circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Tamaño del botón */
+    height: 30px;
+}
+
+.btn-danger.icon-close svg {
+    width: 100%; /* Ajuste para que el ícono ocupe todo el espacio disponible */
+    height: 100%;
+}
+
+/* Por defecto, los botones de precio están ocultos */
+.price-filter {
+    display: none;
+}
+
+/* Clase para ocultar el contenedor de filtros */
+.hidden {
+    display: none;
+}
+
+/* Puedes mantener los estilos básicos de los botones */
+/* Contenedor de los botones */
+.filter-options {
+    display: flex;
+    justify-content: space-between; /* Opcional: Puedes usar 'center', 'space-around', etc. según el espaciado que desees */
+    background-color: transparent; /* Fondo del contenedor transparente */
+    padding: 10px; /* Opcional: Espaciado alrededor del contenido */
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Botones */
+.filter-options button {
+    padding: 10px 15px;
+    background-color: white; /* Fondo del botón transparente */
+    
+
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto hover */
+.filter-options button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Botón activo */
+.price-filter.active {
+    background-color: #007bff; /* Fondo del botón activo */
+    color: white;
+    border: none;
+}
+
+.filter-options button {
+    display: none;
+}
+
+/* Estilos por defecto del botón de filtro */
+.description-filter {
+    background-color: #f0f0f0;  /* Color de fondo claro */
+    color: #333;  /* Color del texto */
+    border: 1px solid #ccc;  /* Borde gris claro */
+    padding: 10px 15px;  /* Espaciado interno */
+    cursor: pointer;  /* Cambia el cursor a puntero */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para el botón activo */
+.description-filter.active {
+    background-color: #007bff;  /* Color de fondo azul para indicar que está activo */
+    color: white;  /* Color de texto blanco */
+    border: none;
+}
+
+/* Efecto hover para mejorar la interacción */
+.description-filter:hover {
+    background-color: #e0e0e0;  /* Color de fondo más oscuro al pasar el ratón */
+    
+}
+/* Estilos por defecto del botón de filtro */
+button {
+    font-family: 'Roboto', sans-serif;  /* Fuente más moderna y profesional */
+    background-color: white;  /* Fondo blanco para una apariencia limpia */
+    color: #007bff;  /* Texto azul para destacar */
+    border: 2px solid #007bff;  /* Borde azul para darle estructura */
+    padding: 10px 20px;  /* Ajustar el padding para mayor tamaño */
+    border-radius: 5px;  /* Bordes ligeramente redondeados */
+    cursor: pointer;  /* Cambia el cursor a puntero */
+    transition: all 0.3s ease-in-out;  /* Transiciones suaves */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra ligera para dar profundidad */
+    margin: 5px;  /* Espacio entre los botones */
+    font-size: 16px;  /* Tamaño de fuente más grande para legibilidad */
+}
+button:focus {
+    outline: none !important;
+}
+/* Estilo para el estado hover */
+button:hover {
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada al hacer hover */
+    transform: translateY(-2px);  /* Efecto de elevación */
+}
+
+
+
+.filter-container {
+    display: none; /* Ocultarlo por defecto */
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    transition: height 0.3s ease, opacity 0.3s ease; /* Transiciones suaves para la altura y opacidad */
+}
+/* Cada grupo de filtros (precio, código, descripción) */
+.filter-group {
+    display: flex;
+    flex-direction: column; /* Alineación de cada grupo (título y select) en columna */
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 200px; /* Ancho mínimo para que los selects no se compriman */
+    background-color: #f0f0f0; /* Fondo claro para mejor visibilidad */
+    padding: 10px; /* Espaciado interno para mayor comodidad visual */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad */
+    margin: 1rem;
+}
+
+/* Estilo para el label de cada filtro */
+.filter-group label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Separación entre el label y el select */
+    font-size: 14px; /* Tamaño de texto ajustado */
+}
+
+/* Estilo para los selects */
+.filter-select {
+    width: 100%; /* Para que el select ocupe todo el ancho del grupo */
+    padding: 8px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: white; /* Fondo blanco */
+    color: #333; /* Color de texto */
+    font-size: 14px; /* Tamaño del texto */
+    cursor: pointer;
+    transition: border-color 0.3s ease; /* Efecto de transición */
+}
+
+/* Cambiar color del borde cuando se selecciona el select */
+.filter-select:focus {
+    outline: none;
+}
+
+ /* Boton up */
+ .scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #bb1e1e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0; /* Oculto por defecto */
+    visibility: hidden; /* Oculto por defecto */
+}
+
+.scrollToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scrollToTop:hover {
+    background-color: #ee2121;
+}
+
+
+
+ /* Boton busqueda */
+#search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+#search-button i {
+    color: white;
+    font-size: 16px;
+}
+
+
+
+/* Estilo para la barra de búsqueda */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f1f1f1; /* Fondo suave */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    
+}
+
+/* Input de búsqueda */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#search-input:focus {
+    border-color: #ee2121;
+}
+
+/* Botón de búsqueda (lupa) */
+#search-button {
+    background-color: #ee2121;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #ee2121;
+}
+
+/* Botones adicionales */
+#filter-button, #grid-button, #btnExportar {
+    background-color: #4b5563;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#filter-button:hover, #grid-button:hover, #btnExportar:hover {
+    background-color: #374151;
+}
+
+/* Botón exportar en verde */
+#btnExportar {
+    background-color: #10b981;
+    margin-left: auto; /* Alinea a la derecha */
+}
+
+#btnExportar:hover {
+    background-color: #059669;
+}
+
+/* Estilo para la barra de filtros */
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.filter-bar button, .filter-bar span {
+    background-color: #e5e7eb;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-bar button:hover {
+    background-color: #ee2121;
+    color: #fff;
+}
+
+#product-count {
+    font-weight: bold;
+    color: #4b5563;
+}
+
+
+
+.div-logo-supra {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin: 0 auto !important;
+    height: 400px !important;
+  }
+  #imagen-supra {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+

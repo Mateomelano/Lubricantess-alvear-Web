@@ -1,0 +1,18 @@
+a {
+    color: inherit !important; /* Hereda el color del elemento padre */
+    text-decoration: none !important; /* Quita el subrayado */
+  }
+  
+  a:hover {
+    color: inherit !important; /* Mantiene el color al pasar el cursor */
+    text-decoration: none !important; /* Quita el subrayado en hover también */
+  }
+
+.p-correo {
+  display: flex;
+  align-items: center;
+}
+
+.p-correo , #p-correo {
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,42 @@
+
+#content-area {	
+    position: relative;
+    top: 80px;
+    width: 175.6vh;
+    height: 91.5vh;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+
+.content{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 30vh;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+
+button {
+    font-family: 'Roboto', sans-serif;  /* Fuente más moderna y profesional */
+    background-color: white;  /* Fondo blanco para una apariencia limpia */
+    color: #007bff;  /* Texto azul para destacar */
+    border: 2px solid #007bff;  /* Borde azul para darle estructura */
+    padding: 10px 20px;  /* Ajustar el padding para mayor tamaño */
+    border-radius: 5px;  /* Bordes ligeramente redondeados */
+    cursor: pointer;  /* Cambia el cursor a puntero */
+    transition: all 0.3s ease-in-out;  /* Transiciones suaves */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra ligera para dar profundidad */
+    margin: 5px;  /* Espacio entre los botones */
+    font-size: 16px;  /* Tamaño de fuente más grande para legibilidad */
+}
+
+/* Estilo para el estado hover */
+button:hover {
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada al hacer hover */
+    transform: translateY(-2px);  /* Efecto de elevación */
+}

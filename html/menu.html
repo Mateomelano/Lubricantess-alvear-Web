@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- Estilos y enlaces de Bootstrap -->
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="preloader" style="display: none;">Cargando imágenes...
+  </div>
+  <div class="content" id="carouselContent" style="display: none;">
+    <!-- Slider de imágenes (este estará oculto hasta que todas las imágenes se carguen) -->
+    <div id="imageSlider" class="carousel slide" data-ride="carousel" data-interval="2500">
+      <ol class="carousel-indicators" id="carouselIndicators">
+        <!-- Los indicadores se generan dinámicamente desde el archivo slider.js -->
+      </ol>
+      <div class="carousel-inner" id="carouselInner">
+        <!-- Las imágenes se generan dinámicamente desde el archivo slider.js -->
+      </div>
+      <a class="carousel-control-prev" href="#imageSlider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#imageSlider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sección de productos destacados -->
+  <!-- Sección de productos destacados -->
+  <div class="container mt-5">
+    <h2 class="text-center">Productos Destacados</h2>
+    <div class="separator">
+      <span> </span>
+    </div>
+    <div class="row" id="productosDestacados">
+      <!-- Productos se inyectarán aquí dinámicamente desde el script -->
+    </div>
+    <!-- Botón Ver Más -->
+    <div class="text-center mt-4">
+      <a href="#/productos" class="btn-ver-mas">Ver Más</a>
+    </div>
+  </div>
+
+  <footer class="footer footer-black footer-white mt-5">
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="footer-nav"></nav>
+        <div class="credits ml-auto">
+          <span class="copyright">
+            <script>document.write(new Date().getFullYear())</script>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript de Bootstrap y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/productos.js"></script> <!-- Script externo para cargar productos -->
+</body>
+
+</html>

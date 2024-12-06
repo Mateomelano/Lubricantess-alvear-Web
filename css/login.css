@@ -1,0 +1,174 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(to right, #4b79a1, #283e51);
+    background-image: url('../img/bannerrrrr.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    width: 800px; 
+    padding: 40px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    right: 220px;
+}
+.login-image{
+    width: 50px !important;
+
+}
+.login-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.boton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+#login-container img {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Separador */
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid black; /* Cambia el color si es necesario */
+}
+
+.separator:not(:empty)::before {
+    margin-right: 10px;
+}
+
+.separator:not(:empty)::after {
+    margin-left: 10px;
+}
+
+.separator span {
+    font-weight: bold;
+    color: black; /* Cambia el color del texto si es necesario */
+}
+
+
+#login-button{
+    width: 35% !important;
+    background-color: rgb(214, 33, 33);
+}
+
+#login-button:hover{
+    width: 35% !important;
+    background-color: #e63946;
+}
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Tablets y dispositivos con pantallas medianas */
+@media (max-width: 1024px) {
+    .login-container {
+        width: 180%;
+        padding: 30px;
+        margin: 0 auto;
+        right: 100px;
+    }
+    .login-title {
+        font-size: 22px;
+    }
+    .login-subtitle {
+        font-size: 13px;
+    }
+}
+
+/* Dispositivos móviles en orientación horizontal */
+@media (max-width: 768px) {
+    .login-container {
+        width: 190%;
+        padding: 25px;
+    }
+    .login-title {
+        font-size: 20px;
+    }
+    .login-subtitle {
+        font-size: 12px;
+    }
+    #login-button {
+        width: 50% !important;
+    }
+}
+
+/* Dispositivos móviles en orientación vertical */
+@media (max-width: 480px) {
+    .login-container {
+        width: 195%;
+        padding: 20px;
+    }
+    .login-title {
+        font-size: 18px;
+    }
+    .login-subtitle {
+        font-size: 11px;
+    }
+    .boton {
+        font-size: 14px;
+        padding: 8px;
+    }
+    #login-button {
+        width: 60% !important;
+    }
+}
