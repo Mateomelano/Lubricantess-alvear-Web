@@ -1,0 +1,2 @@
+export const API_BASE_URL = 'http://190.123.85.126:60009'; // Para funciones específicas, importadas desde módulos JavaScript
+window.API_BASE_URL = 'http://190.123.85.126:60009'; // Para scripts globales, usando window.API_BASE_URL
